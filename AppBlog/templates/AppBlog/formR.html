@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Formulario de registro-->
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'AppBlog/css/stylesFR.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Formulario Registro </title>
+</head>
+<body>
+    <form action="{% url 'register' %}" method="POST"> {% csrf_token %}
+        <h1>Formulario de Registro </h1>
+        
+        {{ form.as_p }}
+        
+        <button>Registrarse</button>
+        <p class="link"><a href="{% url 'login_request' %}">¿Ya tienes cuenta?</a></p>
+    </form>
+</body>
+</html>

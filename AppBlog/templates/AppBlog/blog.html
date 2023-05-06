@@ -1,0 +1,23 @@
+{% extends "AppBlog/padre.html" %}
+{% load static %}
+
+{% block contenido %}
+
+    <div class="container">
+        
+        <br>
+        <p>{{blog.fecha}} - Autor: {{blog.autor}} </p>
+
+        <img class="img-thumbnail" src="{{blog.imagen.url}}">
+
+        <h1>{{blog.titulo}}</h1>
+
+        <h5>{{blog.subtitulo}}</h5>
+
+        <p>{{blog.cuerpo|safe}}</p>
+
+        
+    </div>
+
+{% endblock %}
+

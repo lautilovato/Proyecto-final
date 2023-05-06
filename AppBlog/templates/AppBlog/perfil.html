@@ -1,0 +1,20 @@
+{% extends "AppBlog/padre.html" %}
+{% load static %}
+
+{% block contenido %}
+
+    <div class="container">
+        
+        <br>
+        <h1> Datos del usuario </h1>
+        <p> Nombre de usuario: {{ user.username }} </p>
+        <p> Nombre: {{ user.first_name }} </p>
+        <p> Apellido: {{ user.last_name }} </p>
+        <p> Email: {{ user.email }} </p>
+        <p> Perfil de GitHub: <a class="link-opacity-100-hover" href="{{ user.perfil.web_link }}">{{ user.perfil.web_link }}</a></p>
+        <p> Descripción: {{ user.perfil.descripcion }} </p>
+        <a href="{% url 'editar_perfil' %}" class="btn btn-secondary">Editar Perfil</a> 
+        <a href="{% url 'agregar_avatar' %}" class="btn btn-secondary">Editar Avatar</a>
+    </div>
+
+{% endblock %}

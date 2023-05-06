@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>About</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'AppBlog/css/stylesAbout.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'inicio' %}">Inicio</a>
+                <a class="navbar-link" href="{% url 'agregar_blog' %}">Crear Post</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <img src="{{ avatar }}" alt="Avatar" style="width:50px;height:50px;"/>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'perfil_detalle' %}">Mi perfil </a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'buscar_chat' %}">Mensajes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'login_request' %}">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger">
+                <span class="d-block d-lg-none">Lautaro Lovato</span>
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'AppBlog/assets/img/fotoAbout.jpeg' %}" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+            </div>
+        </nav>
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Lautaro
+                        <span class="text-primary">Lovato</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Quilmes · Buenos Aires · 11 5384-6001 ·
+                        <a href="mailto:lautaro.lovato07@gmail.com">lautaro.lovato07@gmail.com</a>
+                    </div>
+                    <p class="lead mb-5">Soy un joven de 20 años que quiere en algún momento  dedicarse a la programación, que es realmente lo que mas me apasiona y trato de mejorar todos los dias para  conseguirlo</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://github.com/lautilovato"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="https://www.instagram.com/lautilovato/"><i class="fab fa-instagram"></i></a>
+                        <a class="social-icon" href="https://www.facebook.com/neron.herrera/"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+    </body>
+</html>

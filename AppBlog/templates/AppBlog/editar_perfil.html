@@ -1,0 +1,21 @@
+{% extends "AppBlog/padre.html" %}
+
+{% load static %}
+
+{% block contenido%}
+<br>
+<form action="{% url 'editar_perfil' %}" method="POST"> {% csrf_token %}
+    <div class="container">
+        <h1> Usuario - {{ user.username }}</h1>
+        <table>
+        
+            {{ form.as_table }}
+        
+        </table>
+        <br>
+        <input type="submit" value="Guardar Cambios">
+    </div>
+    
+</form>
+
+{% endblock %}
